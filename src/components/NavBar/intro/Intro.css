@@ -1,0 +1,244 @@
+/* HERO SECTION */
+
+#intro{
+min-height:calc(100vh - 70px);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:40px 10%;
+gap:60px;
+
+position:relative;
+overflow:hidden;
+margin-top:30px;   /* prevents navbar overlap */
+}
+
+/* LEFT SIDE CONTENT */
+
+.heroLeft{
+flex:1;
+max-width:520px;
+animation:fadeLeft 1s ease;
+z-index:2;
+}
+
+.hello{
+font-size:20px;
+color:#6b7280;
+margin-bottom:10px;
+}
+
+.introText{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.introName{
+color:#14b8a6;
+}
+
+.introRole{
+font-size:2rem;
+font-weight:600;
+margin-bottom:15px;
+color:white;
+}
+
+.introPara{
+font-size:1rem;
+font-weight:300;
+line-height:1.6;
+margin-bottom:30px;
+color:white;
+}
+
+/* BUTTONS */
+
+.heroButtons{
+display:flex;
+gap:15px;
+}
+
+.hireBtn{
+padding:12px 30px;
+border:none;
+background:linear-gradient(90deg,#14b8a6,#06b6d4);
+border-radius:6px;
+color:white;
+font-weight:500;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hireBtn:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(20,184,166,0.5);
+}
+
+.resumeBtn{
+padding:9px 20px;
+border:2px solid #14b8a6;
+color:white;
+border-radius:6px;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
+}
+
+.resumeBtn:hover{
+transform:scale(1.05);
+}
+
+/* RIGHT IMAGE */
+
+.heroRight{
+z-index:2;
+}
+
+.imageWrapper{
+width:380px;
+height:380px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle, rgba(37,99,235,0.25), transparent 70%);
+}
+
+.heroRight img{
+width:360px;
+height:auto;
+border-radius:50%;
+object-fit:cover;
+margin-top:10px;
+}
+
+/* TEXT ANIMATION */
+
+@keyframes fadeLeft{
+from{
+opacity:0;
+transform:translateX(-40px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+/* =========================
+TABLET + MOBILE
+========================= */
+
+@media(max-width:900px){
+
+#intro{
+flex-direction:column;
+text-align:center;
+padding:40px 8%;
+}
+
+/* content above image */
+
+.heroLeft{
+z-index:3;
+}
+
+/* image becomes background */
+
+.heroRight{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:1;
+opacity:0.15;
+}
+
+/* remove glow wrapper */
+
+.imageWrapper{
+background:none;
+width:auto;
+height:auto;
+}
+
+/* image size */
+
+.heroRight img{
+width:300px;
+margin-top:0;
+filter:blur(2px);
+}
+
+.heroButtons{
+justify-content:center;
+}
+
+.introText{
+font-size:40px;
+}
+
+.introRole{
+font-size:1.6rem;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:600px){
+
+.introText{
+font-size:32px;
+}
+
+.introRole{
+font-size:1.3rem;
+}
+
+.introPara{
+font-size:14px;
+}
+
+.heroButtons{
+flex-direction:column;
+align-items:center;
+}
+
+.hireBtn,
+.resumeBtn{
+width:180px;
+justify-content:center;
+}
+
+.heroRight img{
+width:240px;
+}
+
+}
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media(max-width:400px){
+
+.introText{
+font-size:28px;
+}
+
+.introRole{
+font-size:1.1rem;
+}
+
+.heroRight img{
+width:200px;
+}
+
+}

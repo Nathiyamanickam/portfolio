@@ -1,0 +1,186 @@
+.navbar{
+height:70px;
+width:100%;
+padding:0 8%;  
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+
+background:rgba(15,23,42,0.6);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+/* LOGO */
+
+.logo{
+height:40px;
+}
+section{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+/* DESKTOP MENU */
+
+.desktopMenu{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.desktopMenuListItem{
+color:white;
+cursor:pointer;
+font-size:15px;
+position:relative;
+transition:0.3s;
+}
+
+.desktopMenuListItem:hover{
+color:#00bcd4;
+}
+
+/* underline animation */
+
+.desktopMenuListItem::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#00bcd4;
+transition:0.3s;
+}
+
+.desktopMenuListItem:hover::after{
+width:100%;
+}
+
+/* RIGHT SECTION */
+
+.rightSection{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+/* SOCIAL ICONS */
+
+.link{
+display:flex;
+gap:15px;
+}
+
+.socialIcon{
+font-size:20px;
+color:white;
+transition:0.3s;
+}
+
+.socialIcon:hover{
+color:#00bcd4;
+transform:translateY(-3px);
+}
+
+/* CONTACT BUTTON */
+
+.desktopMenuBtn{
+padding:8px 18px;
+border:none;
+border-radius:25px;
+background:#00bcd4;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.desktopMenuBtn:hover{
+background:#0097a7;
+}
+
+/* HAMBURGER */
+
+.mobileMenu{
+display:none;
+width:28px;
+cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+.navMenu{
+position:absolute;
+top:70px;
+right:20px;
+background:#020617;
+border-radius:8px;
+display:flex;
+flex-direction:column;
+padding:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.listItem{
+padding:10px 20px;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.listItem:hover{
+color:#00bcd4;
+}
+
+/* ====================
+TABLET
+==================== */
+
+@media (max-width:992px){
+
+.desktopMenu,
+.desktopMenuBtn,
+.link{
+display:none;
+}
+
+.mobileMenu{
+display:block;
+}
+
+}
+
+/* ====================
+MOBILE
+==================== */
+
+@media (max-width:600px){
+
+.navbar{
+height:60px;
+padding:0 15px;
+}
+
+.logo{
+height:32px;
+}
+
+.mobileMenu{
+width:24px;
+}
+
+.navMenu{
+width:170px;
+right:10px;
+top:60px;
+}
+
+}
