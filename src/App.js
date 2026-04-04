@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/navbar";
 import Contacts from "./components/contacts/Contacts";
 import Footer from "./components/footer/Footer";
 import Skills from "./components/skills/Skills";
-
+import './style.css';
 
 
 

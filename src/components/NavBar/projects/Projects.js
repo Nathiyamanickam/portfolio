@@ -5,7 +5,7 @@ import { FiExternalLink } from "react-icons/fi";
 import project1 from "../../../assets/Project1img.png";
 import project2 from "../../../assets/Project2img.png";
 import project3 from "../../../assets/Project3img.png";
-// import project4 from "../../../assets/Project4img.png";
+import project4 from "../../../assets/Project4img.png";
 import project5 from "../../../assets/Project5img.png";
 
 
@@ -84,10 +84,10 @@ const Projects = () => {
             <p>Modern responsive React portfolio showcasing projects and skills.</p>
             <div className="tech">React</div>
             <div className="projectBtns">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Nathiyamanickam/portfolio" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://Nathiyamanickam.github.io/portfolio" target="_blank" rel="noopener noreferrer">
                 <FiExternalLink />
               </a>
             </div>
@@ -111,19 +111,20 @@ const Projects = () => {
           
 
            <div className="projectCard">
-            <img src={project1} alt="cart" />
+            <img src={project4} alt="cart" />
             <h3>Shopping Cart</h3>
             <p>Built a React shopping cart with add/remove functionality using Context API.</p>
             <div className="tech">React</div>
             <div className="projectBtns">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Nathiyamanickam/shoppingcart" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://Nathiyamanickam.github.io/shoppingcart" target="_blank" rel="noopener noreferrer">
                 <FiExternalLink />
               </a>
             </div>
           </div>
+
 
           <div className="projectCard">
             <img src={project5} alt="E-Commerce App" />
